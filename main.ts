@@ -82,7 +82,7 @@ function run(p, inp) {
           r = a === -2147483648 && b === -1 ? a : (a / b) | 0;
         } else if (op === 0x14) {
           if (b === 0) return done(4);
-          r = b === -1 ? 0 : (a % b) | 0;
+          r = (a % b) | 0;
         } else if (op === 0x15) {
           if (b === 0) return done(4);
           r = Math.floor((a >>> 0) / (b >>> 0)) | 0;
